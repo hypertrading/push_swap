@@ -6,7 +6,7 @@
 /*   By: vklepper <vklepper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/11 00:08:18 by vklepper          #+#    #+#             */
-/*   Updated: 2016/03/11 13:30:04 by vklepper         ###   ########.fr       */
+/*   Updated: 2016/03/11 14:00:16 by vklepper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,11 +69,38 @@ void print_etat(t_data *data)
 	
 }
 
+void	solve(t_data *d)
+{
+	int max_in_a;
+
+	max_in_a = d->stack_a[0];
+	while(1)
+	{	
+		if (d->stack_a[d->top_a] == max_in_a)
+		{
+			f_pb(d);
+			if(d->top_a < 0)
+				break;
+			max_in_a = d->stack_a[d->top_a];
+		}
+		else if (d->stack_a[d->top_a] > max_in_a)
+			max_in_a = d->stack_a[d->top_a];
+		f_ra(d);
+	}
+	while(d->top_b >= 0)
+	{
+		f_pa(d);
+	}
+}
+
 void	push_swap(char **argv)
 {
 	t_data data;
 
 	parsing(argv, &data);
+	print_etat(&data);
+	solve(&data);
+	ft_putstr("\n");
 	print_etat(&data);
 	free(data.stack_a);
 	free(data.stack_b);

@@ -6,7 +6,7 @@
 /*   By: vklepper <vklepper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/11 11:31:24 by vklepper          #+#    #+#             */
-/*   Updated: 2016/03/11 13:00:16 by vklepper         ###   ########.fr       */
+/*   Updated: 2016/03/11 13:59:12 by vklepper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ void	f_pa(t_data *d)
 		d->stack_a[d->top_a + 1] = d->stack_b[d->top_b];
 		d->top_b--;
 		d->top_a++;
-	}
+	}	
+	ft_putstr(" pa");
 }
 void	f_pb(t_data *d)
 {
@@ -30,4 +31,5 @@ void	f_pb(t_data *d)
 		d->top_a--;
 		d->top_b++;
 	}
+	ft_putstr(" pb");
 }
