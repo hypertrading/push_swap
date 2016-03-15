@@ -6,7 +6,7 @@
 /*   By: vklepper <vklepper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/11 00:20:19 by vklepper          #+#    #+#             */
-/*   Updated: 2016/03/11 13:28:11 by vklepper         ###   ########.fr       */
+/*   Updated: 2016/03/15 17:24:31 by vklepper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_data
 
 void    push_swap(char **argv);
 void    parsing(char **argv, t_data *data);
+void	parsing_flag(char **argv, t_data *data);
 void	print_etat(t_data *data);
 void    ft_error(int i);
 void    f_sa(t_data *d);
