@@ -6,7 +6,7 @@
 /*   By: vklepper <vklepper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/15 16:40:49 by vklepper          #+#    #+#             */
-/*   Updated: 2016/03/15 18:05:32 by vklepper         ###   ########.fr       */
+/*   Updated: 2016/03/15 23:24:16 by vklepper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,16 @@ void	parsing_flag(char **argv, t_data *data)
 
 	i = 0;
 	j = 2;
-	while(argv[i])
+	while (argv[i])
 		i++;
 	tmp = i;
 	i -= 2;
-	if(!(data->stack_a = (int *)malloc(sizeof(int) * (i))))
+	if (!(data->stack_a = (int *)malloc(sizeof(int) * (i))))
 		ft_error(1);
-	if(!(data->stack_b = (int *)malloc(sizeof(int) * (i))))
+	if (!(data->stack_b = (int *)malloc(sizeof(int) * (i))))
 		ft_error(1);
-	while (j < tmp)
-	{
-		data->stack_a[i - 1] = ft_atoi(argv[j]);
-		j++;
-		i--;
-	}
+	while (j++ < tmp)
+		data->stack_a[i-- - 1] = ft_atoi(argv[j - 1]);	
 	data->top_a = tmp - 3;
 	data->top_b = -1;
 }
@@ -46,20 +42,16 @@ void	parsing(char **argv, t_data *data)
 
 	i = 0;
 	j = 1;
-	while(argv[i])
+	while (argv[i])
 		i++;
 	tmp = i;
 	i -= 1;
-	if(!(data->stack_a = (int *)malloc(sizeof(int) * (i))))
+	if (!(data->stack_a = (int *)malloc(sizeof(int) * (i))))
 		ft_error(1);
-	if(!(data->stack_b = (int *)malloc(sizeof(int) * (i))))
+	if (!(data->stack_b = (int *)malloc(sizeof(int) * (i))))
 		ft_error(1);
-	while (j < tmp)
-	{
-		data->stack_a[i - 1] = ft_atoi(argv[j]);
-		j++;
-		i--;
-	}
+	while (j++ < tmp)
+		data->stack_a[i-- - 1] = ft_atoi(argv[j - 1]);
 	data->top_a = tmp - 2;
 	data->top_b = -1;
 }

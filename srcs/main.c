@@ -6,7 +6,7 @@
 /*   By: vklepper <vklepper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/11 00:08:18 by vklepper          #+#    #+#             */
-/*   Updated: 2016/03/15 19:11:21 by vklepper         ###   ########.fr       */
+/*   Updated: 2016/03/15 23:27:36 by vklepper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	solve(t_data *d)
 	int min_in_a;
 
 	min_in_a = d->stack_a[0];
-	while(d->top_a > 0)
+	while (d->top_a > 0)
 	{	
 		if (d->stack_a[d->top_a] == min_in_a)
 		{
@@ -30,9 +30,9 @@ void	solve(t_data *d)
 		f_ra(d);
 		ft_putstr("ra ");
 	}
-	while(d->top_b >= 0)
+	while (d->top_b >= 0)
 	{
-		if(d->top_b - 1 < 0)
+		if (d->top_b - 1 < 0)
 			ft_putstr("pa");
 		else
 			ft_putstr("pa ");
@@ -46,18 +46,17 @@ int		arguments_checker(char **argv)
 	int j;
 
 	i = 1;
-	j= 0;
-	if(ft_strcmp(argv[1], "-d") == 0)
+	if (ft_strcmp(argv[1], "-d") == 0)
 		i = 2;
-	while(argv[i])
+	while (argv[i])
 	{
-		while(argv[i][j] != 0)
+		j = 0;
+		while (argv[i][j] != 0)
 		{
-			if(argv[i][j] != '-' && ft_isdigit(argv[i][j]) == 0)
+			if (argv[i][j] != '-' && ft_isdigit(argv[i][j]) == 0)
 				return 0;
 			j++;
 		}
-		j = 0;
 		i++;
 	}
 	return 1;
@@ -66,12 +65,10 @@ int		arguments_checker(char **argv)
 void	push_swap(char **argv)
 {
 	t_data data;
-	if(arguments_checker(argv) == 0)
-	{
-		ft_error(0);
-		return;
-	}
-	if(ft_strcmp(argv[1], "-d") == 0)
+
+	if (arguments_checker(argv) == 0)
+		return ft_error(0);
+	if (ft_strcmp(argv[1], "-d") == 0)
 	{
 		parsing_flag(argv, &data);
 		print_etat(&data);
