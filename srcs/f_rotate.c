@@ -6,7 +6,7 @@
 /*   By: vklepper <vklepper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/11 12:52:23 by vklepper          #+#    #+#             */
-/*   Updated: 2016/03/11 13:58:39 by vklepper         ###   ########.fr       */
+/*   Updated: 2016/03/15 12:53:06 by vklepper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	f_ra(t_data *d)
 		i--;
 	}
 	d->stack_a[0] = tmp;
-	ft_putstr(" ra");
+//	ft_putstr(" ra");
 }
 
 void	f_rb(t_data *d)
@@ -41,12 +41,12 @@ void	f_rb(t_data *d)
 		i--;
 	}
 	d->stack_b[0] = tmp;
-	ft_putstr(" rb");
+//	ft_putstr(" rb");
 }
 
 void	ff_rr(t_data *d)
 {
 	f_ra(d);
 	f_rb(d);
-	ft_putstr(" rr");
+//	ft_putstr(" rr");
 }
