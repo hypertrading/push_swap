@@ -6,7 +6,7 @@
 /*   By: vklepper <vklepper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/11 00:08:18 by vklepper          #+#    #+#             */
-/*   Updated: 2016/03/15 18:15:16 by vklepper         ###   ########.fr       */
+/*   Updated: 2016/03/15 19:11:21 by vklepper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,8 +90,7 @@ void	push_swap(char **argv)
 
 int		main(int argc, char **argv)
 {
-	/*mettre condition en cas de flags*/
-	if (argc < 2)
+	if (argc < 2 || (ft_strcmp(argv[1], "-d") == 0 && argc < 3))
 		ft_error(0);
 	else
 		push_swap(argv);
