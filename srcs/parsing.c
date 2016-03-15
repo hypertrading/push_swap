@@ -6,7 +6,7 @@
 /*   By: vklepper <vklepper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/15 16:40:49 by vklepper          #+#    #+#             */
-/*   Updated: 2016/03/15 17:19:40 by vklepper         ###   ########.fr       */
+/*   Updated: 2016/03/15 18:05:32 by vklepper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ void	parsing_flag(char **argv, t_data *data)
 		i++;
 	tmp = i;
 	i -= 2;
-	ft_putnbr(i);
 	if(!(data->stack_a = (int *)malloc(sizeof(int) * (i))))
 		ft_error(1);
 	if(!(data->stack_b = (int *)malloc(sizeof(int) * (i))))
