@@ -6,7 +6,7 @@
 /*   By: vklepper <vklepper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/15 16:40:49 by vklepper          #+#    #+#             */
-/*   Updated: 2016/03/15 23:24:16 by vklepper         ###   ########.fr       */
+/*   Updated: 2016/03/17 15:11:40 by vklepper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	parsing_flag(char **argv, t_data *data)
 	if (!(data->stack_b = (int *)malloc(sizeof(int) * (i))))
 		ft_error(1);
 	while (j++ < tmp)
-		data->stack_a[i-- - 1] = ft_atoi(argv[j - 1]);	
+		data->stack_a[i-- - 1] = ft_atoi(argv[j - 1]);
 	data->top_a = tmp - 3;
 	data->top_b = -1;
 }
