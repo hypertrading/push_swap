@@ -25,6 +25,13 @@ void	f_ra(t_data *d)
 		i--;
 	}
 	d->stack_a[0] = tmp;
+	if (d->space == 1)
+		ft_putstr(" ra");
+	else
+	{
+		ft_putstr("ra");
+		d->space = 1;
+	}
 }
 
 void	f_rb(t_data *d)
@@ -40,6 +47,13 @@ void	f_rb(t_data *d)
 		i--;
 	}
 	d->stack_b[0] = tmp;
+	if (d->space == 1)
+		ft_putstr(" rb");
+	else
+	{
+		ft_putstr("rb");
+		d->space = 1;
+	}
 }
 
 void	ff_rr(t_data *d)

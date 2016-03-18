@@ -19,6 +19,13 @@ void	f_sa(t_data *d)
 	tmp = d->stack_a[d->top_a];
 	d->stack_a[d->top_a] = d->stack_a[d->top_a - 1];
 	d->stack_a[d->top_a - 1] = tmp;
+	if (d->space == 1)
+		ft_putstr(" sa");
+	else
+	{
+		ft_putstr("sa");
+		d->space = 1;
+	}
 }
 
 void	f_sb(t_data *d)
@@ -28,6 +35,13 @@ void	f_sb(t_data *d)
 	tmp = d->stack_b[d->top_b];
 	d->stack_b[d->top_b] = d->stack_b[d->top_b - 1];
 	d->stack_b[d->top_b - 1] = tmp;
+	if (d->space == 1)
+		ft_putstr(" sb");
+	else
+	{
+		ft_putstr("sb");
+		d->space = 1;
+	}
 }
 
 void	f_ss(t_data *d)

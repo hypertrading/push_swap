@@ -20,6 +20,13 @@ void	f_pa(t_data *d)
 		d->top_b--;
 		d->top_a++;
 	}
+	if (d->space == 1)
+		ft_putstr(" pa");
+	else
+	{
+		ft_putstr("pa");
+		d->space = 1;
+	}
 }
 
 void	f_pb(t_data *d)
@@ -30,5 +37,12 @@ void	f_pb(t_data *d)
 		d->stack_a[d->top_a] = 0;
 		d->top_a--;
 		d->top_b++;
+	}
+	if (d->space == 1)
+		ft_putstr(" pb");
+	else
+	{
+		ft_putstr("pb");
+		d->space = 1;
 	}
 }

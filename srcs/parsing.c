@@ -6,7 +6,7 @@
 /*   By: vklepper <vklepper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/15 16:40:49 by vklepper          #+#    #+#             */
-/*   Updated: 2016/03/17 15:11:40 by vklepper         ###   ########.fr       */
+/*   Updated: 2016/03/18 13:53:38 by vklepper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,26 @@ void	parsing(char **argv, t_data *data)
 		data->stack_a[i-- - 1] = ft_atoi(argv[j - 1]);
 	data->top_a = tmp - 2;
 	data->top_b = -1;
+}
+
+int		arguments_checker(char **argv)
+{
+	int i;
+	int j;
+
+	i = 1;
+	if (ft_strcmp(argv[1], "-d") == 0)
+		i = 2;
+	while (argv[i])
+	{
+		j = 0;
+		while (argv[i][j] != 0)
+		{
+			if (argv[i][j] != '-' && ft_isdigit(argv[i][j]) == 0)
+				return (0);
+			j++;
+		}
+		i++;
+	}
+	return (1);
 }
