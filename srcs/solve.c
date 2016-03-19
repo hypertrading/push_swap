@@ -6,7 +6,7 @@
 /*   By: vklepper <vklepper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/18 13:31:07 by vklepper          #+#    #+#             */
-/*   Updated: 2016/03/18 18:43:04 by vklepper         ###   ########.fr       */
+/*   Updated: 2016/03/19 11:14:48 by vklepper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,18 +93,23 @@ int			opti_solve(t_data *d)
 void		brute_solve(t_data *d)
 {
 	int min_in_a;
+	int ptr;
 
-	min_in_a = d->stack_a[0];
+	ptr = d->top_a;
+	min_in_a = d->stack_a[ptr];
 	while (d->top_a > 0)
 	{
-		if (d->stack_a[d->top_a] == min_in_a)
+		if (d->stack_a[ptr] < min_in_a)
+			min_in_a = d->stack_a[ptr];
+		if (ptr == 0)
 		{
+			while (d->stack_a[d->top_a] != min_in_a)
+				f_ra(d);
 			f_pb(d);
-			min_in_a = d->stack_a[d->top_a];
+			ptr = d->top_a + 1;
+			min_in_a = d->stack_a[ptr - 1];
 		}
-		else if (d->stack_a[d->top_a] < min_in_a)
-			min_in_a = d->stack_a[d->top_a];
-		f_ra(d);
+		ptr--;
 	}
 	while (d->top_b >= 0)
 		f_pa(d);
