@@ -32,6 +32,7 @@ void	f_rra(t_data *d)
 		ft_putstr("rra");
 		d->space = 1;
 	}
+	d->nbr_mv++;
 }
 
 void	f_rrb(t_data *d)
@@ -54,6 +55,7 @@ void	f_rrb(t_data *d)
 		ft_putstr("rrb");
 		d->space = 1;
 	}
+	d->nbr_mv++;
 }
 
 void	f_rrr(t_data *d)

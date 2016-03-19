@@ -27,6 +27,7 @@ void	f_pa(t_data *d)
 		ft_putstr("pa");
 		d->space = 1;
 	}
+	d->nbr_mv++;
 }
 
 void	f_pb(t_data *d)
@@ -45,4 +46,5 @@ void	f_pb(t_data *d)
 		ft_putstr("pb");
 		d->space = 1;
 	}
+	d->nbr_mv++;
 }

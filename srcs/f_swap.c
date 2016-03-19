@@ -26,6 +26,7 @@ void	f_sa(t_data *d)
 		ft_putstr("sa");
 		d->space = 1;
 	}
+	d->nbr_mv++;
 }
 
 void	f_sb(t_data *d)
@@ -42,6 +43,7 @@ void	f_sb(t_data *d)
 		ft_putstr("sb");
 		d->space = 1;
 	}
+	d->nbr_mv++;
 }
 
 void	f_ss(t_data *d)

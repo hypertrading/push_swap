@@ -6,7 +6,7 @@
 /*   By: vklepper <vklepper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/11 00:08:18 by vklepper          #+#    #+#             */
-/*   Updated: 2016/03/18 18:43:06 by vklepper         ###   ########.fr       */
+/*   Updated: 2016/03/19 15:51:19 by vklepper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	push_swap(char **argv)
 	t_data data;
 
 	data.space = 0;
+	data.nbr_mv = 0;
 	if (arguments_checker(argv) == 0)
 		return (ft_error(0));
 	if (ft_strcmp(argv[1], "-d") == 0)

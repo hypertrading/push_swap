@@ -6,13 +6,13 @@
 /*   By: vklepper <vklepper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/15 16:40:49 by vklepper          #+#    #+#             */
-/*   Updated: 2016/03/18 13:53:38 by vklepper         ###   ########.fr       */
+/*   Updated: 2016/03/19 18:27:35 by vklepper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	parsing_flag(char **argv, t_data *data)
+void		parsing_flag(char **argv, t_data *data)
 {
 	int i;
 	int j;
@@ -34,7 +34,7 @@ void	parsing_flag(char **argv, t_data *data)
 	data->top_b = -1;
 }
 
-void	parsing(char **argv, t_data *data)
+void		parsing(char **argv, t_data *data)
 {
 	int i;
 	int j;
@@ -56,7 +56,23 @@ void	parsing(char **argv, t_data *data)
 	data->top_b = -1;
 }
 
-int		arguments_checker(char **argv)
+static int	isnumber(char *nbr)
+{
+	int i;
+
+	i = 0;
+	while (nbr[i])
+	{
+		if (i == 0 && (nbr[0] == '-' || nbr[0] == '+'))
+			i++;
+		if (ft_isdigit(nbr[i]) == 0)
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+int			arguments_checker(char **argv)
 {
 	int i;
 	int j;
@@ -66,10 +82,13 @@ int		arguments_checker(char **argv)
 		i = 2;
 	while (argv[i])
 	{
-		j = 0;
-		while (argv[i][j] != 0)
+		ft_strcmp(argv[i], "-0") == 0 ? argv[i] = "0" : 0;
+		if (isnumber(argv[i]) == 0)
+			return (0);
+		j = ft_strcmp(argv[1], "-d") == 0 ? 2 : 1;
+		while (argv[j])
 		{
-			if (argv[i][j] != '-' && ft_isdigit(argv[i][j]) == 0)
+			if (j != i && ft_strcmp(argv[i], argv[j]) == 0)
 				return (0);
 			j++;
 		}
