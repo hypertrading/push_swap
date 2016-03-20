@@ -6,7 +6,7 @@
 /*   By: vklepper <vklepper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/15 16:40:49 by vklepper          #+#    #+#             */
-/*   Updated: 2016/03/19 18:35:22 by vklepper         ###   ########.fr       */
+/*   Updated: 2016/03/20 15:53:54 by vklepper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,22 +56,6 @@ void		parsing(char **argv, t_data *data)
 	data->top_b = -1;
 }
 
-static int	isnumber(char *nbr)
-{
-	int i;
-
-	i = 0;
-	while (nbr[i])
-	{
-		if (i == 0 && (nbr[0] == '-' || nbr[0] == '+'))
-			i++;
-		if (ft_isdigit(nbr[i]) == 0)
-			return (0);
-		i++;
-	}
-	return (1);
-}
-
 int			arguments_checker(char **argv)
 {
 	int i;
@@ -83,7 +67,7 @@ int			arguments_checker(char **argv)
 	while (argv[i])
 	{
 		ft_strcmp(argv[i], "-0") == 0 ? argv[i] = "0" : 0;
-		if (isnumber(argv[i]) == 0)
+		if (ft_isnumber(argv[i]) == 0)
 			return (0);
 		j = ft_strcmp(argv[1], "-d") == 0 ? 2 : 1;
 		while (argv[j])

@@ -6,14 +6,14 @@
 /*   By: vklepper <vklepper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/11 00:20:19 by vklepper          #+#    #+#             */
-/*   Updated: 2016/03/19 18:35:26 by vklepper         ###   ########.fr       */
+/*   Updated: 2016/03/20 15:52:03 by vklepper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "../libft/libft.h"
+# include "../libft/srcs/libft.h"
 
 typedef struct	s_data
 {
