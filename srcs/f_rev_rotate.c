@@ -26,10 +26,10 @@ void	f_rra(t_data *d)
 	}
 	d->stack_a[i] = tmp;
 	if (d->space == 1)
-		ft_putstr(" rra");
+		ft_putstr("\x1B[31m rra\033[0m");
 	else
 	{
-		ft_putstr("rra");
+		ft_putstr("\x1B[31mrra\033[0m");
 		d->space = 1;
 	}
 	d->nbr_mv++;

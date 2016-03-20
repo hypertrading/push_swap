@@ -20,10 +20,10 @@ void	f_sa(t_data *d)
 	d->stack_a[d->top_a] = d->stack_a[d->top_a - 1];
 	d->stack_a[d->top_a - 1] = tmp;
 	if (d->space == 1)
-		ft_putstr(" sa");
+		ft_putstr("\033[1;32m sa\033[0m");
 	else
 	{
-		ft_putstr("sa");
+		ft_putstr("\033[1;32msa\033[0m");
 		d->space = 1;
 	}
 	d->nbr_mv++;

@@ -6,7 +6,7 @@
 /*   By: vklepper <vklepper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/18 13:31:07 by vklepper          #+#    #+#             */
-/*   Updated: 2016/03/19 15:50:59 by vklepper         ###   ########.fr       */
+/*   Updated: 2016/03/20 19:40:11 by vklepper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int			opti_solve(t_data *d)
 
 	top = d->top_a;
 	count = 0;
-	max = d->stack_a[top];
+	max = d->stack_a[d->top_a];
 	while (top >= 0)
 	{
 		if (d->stack_a[top] > max)
@@ -29,7 +29,7 @@ int			opti_solve(t_data *d)
 			count++;
 		top--;
 	}
-	if (top == 2 && count > 0)
+	if (d->top_a == 2 && count > 0)
 		return (solve_three(d));
 	if (count == 1)
 		return (one_swap(d));

@@ -6,7 +6,7 @@
 #    By: vklepper <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/25 17:53:51 by vklepper          #+#    #+#              #
-#*   Updated: 2016/03/20 16:13:21 by vklepper         ###   ########.fr       *#
+#*   Updated: 2016/03/20 16:54:02 by vklepper         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ $(NAME) : $(OBJ)
 
 $(OBJ_PATH)%.o : $(SRC_PATH)%.c
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
-	@$(CC) $(CFLAGS) $(INC) -o $@ -c $<
+	@$(CC) $(FLAGS) $(INC) -o $@ -c $<
 clean:
 	@/bin/rm -rf $(OBJ_PATH)
 

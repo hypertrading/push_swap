@@ -6,7 +6,7 @@
 /*   By: vklepper <vklepper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/11 00:20:19 by vklepper          #+#    #+#             */
-/*   Updated: 2016/03/20 15:52:03 by vklepper         ###   ########.fr       */
+/*   Updated: 2016/03/20 19:11:11 by vklepper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ void			brute_solve(t_data *d);
 void			print_etat(t_data *data);
 void			ft_error(int i);
 void			pb_smallest(t_data *d, int pos, int min);
-int				last_elem_swap(t_data *d);
 int				one_swap(t_data *d);
 int				solve_three(t_data *d);
 void			f_sa(t_data *d);

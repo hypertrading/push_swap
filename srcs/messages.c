@@ -6,7 +6,7 @@
 /*   By: vklepper <vklepper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/15 17:20:46 by vklepper          #+#    #+#             */
-/*   Updated: 2016/03/19 15:55:18 by vklepper         ###   ########.fr       */
+/*   Updated: 2016/03/20 19:12:21 by vklepper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,16 @@ void	print_etat(t_data *d)
 {
 	int i;
 
-	i = 0;
+	i = d->top_a;
 	ft_putstr("--------------\n");
 	ft_putstr("Stack a :");
-	while (i <= d->top_a && d->top_a >= 0)
+	while (i >= 0)
 	{
 		ft_putnbr(d->stack_a[i]);
 		ft_putchar(' ');
-		i++;
+		i--;
 	}
-	ft_putstr("<--\n");
+	ft_putstr("\n");
 	i = 0;
 	ft_putstr("Nombre de coup :");
 	ft_putnbr(d->nbr_mv);
