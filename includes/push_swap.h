@@ -6,7 +6,7 @@
 /*   By: vklepper <vklepper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/11 00:20:19 by vklepper          #+#    #+#             */
-/*   Updated: 2016/03/20 19:11:11 by vklepper         ###   ########.fr       */
+/*   Updated: 2016/03/21 13:45:20 by vklepper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define PUSH_SWAP_H
 
 # include "../libft/srcs/libft.h"
+# define INT_MIN  -2147483648
+# define INT_MAX  2147483647
 
 typedef struct	s_data
 {

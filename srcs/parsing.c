@@ -6,7 +6,7 @@
 /*   By: vklepper <vklepper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/15 16:40:49 by vklepper          #+#    #+#             */
-/*   Updated: 2016/03/20 17:16:29 by vklepper         ###   ########.fr       */
+/*   Updated: 2016/03/21 13:45:15 by vklepper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,8 @@ int			arguments_checker(char **argv)
 	{
 		ft_strcmp(argv[i], "-0") == 0 ? argv[i] = "0" : 0;
 		if (ft_isnumber(argv[i]) == 0)
+			return (0);
+		if (ft_atol(argv[i]) > INT_MAX || ft_atol(argv[i]) < INT_MIN)
 			return (0);
 		j = ft_strcmp(argv[1], "-v") == 0 ? 2 : 1;
 		while (argv[j])

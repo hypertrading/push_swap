@@ -6,7 +6,7 @@
 /*   By: vklepper <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 17:07:14 by vklepper          #+#    #+#             */
-/*   Updated: 2016/03/20 15:43:48 by vklepper         ###   ########.fr       */
+/*   Updated: 2016/03/21 13:39:41 by vklepper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_isascii(int c);
 int		ft_atoi(const char *str);
+long	ft_atol(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_strequ(char const *s1, char const *s2);

@@ -6,7 +6,7 @@
 #    By: vklepper <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/25 17:53:51 by vklepper          #+#    #+#              #
-#*   Updated: 2016/03/20 16:54:02 by vklepper         ###   ########.fr       *#
+#*   Updated: 2016/03/21 13:40:34 by vklepper         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRC_NAME = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigi
 		   ft_strdup.c ft_strequ.c ft_striter.c ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlen.c ft_strmap.c \
 		   ft_strmapi.c ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strndup.c ft_strnequ.c ft_strnew.c \
 		   ft_strnstr.c ft_strrchr.c ft_strrev.c ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c \
-		   ft_tolower.c ft_toupper.c get_next_line.c ft_isnumber.c
+		   ft_tolower.c ft_toupper.c get_next_line.c ft_isnumber.c ft_atol.c
 SRC_PATH = ./srcs/
 OBJ_PATH = ./obj/
 OBJ_NAME = $(SRC_NAME:.c=.o)
@@ -45,3 +45,6 @@ fclean: clean
 	@/bin/rm -f $(NAME)
 
 re: fclean all
+
+norme:
+	@norminette $(SRC)

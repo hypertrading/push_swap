@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: vklepper <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2016/02/04 20:52:39 by vklepper          #+#    #+#              #
-#*   Updated: 2016/03/20 16:20:13 by vklepper         ###   ########.fr       *#
+#    Created: 2016/03/21 12:10:58 by vklepper          #+#    #+#              #
+#*   Updated: 2016/03/21 12:17:44 by vklepper         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,6 @@ re: fclean all
 norme:
 	@norminette $(SRC)
 	@norminette $(INC_PATH)
-	@norminette $(LIB_PATH)/srcs/
+	@#norminette $(LIB_PATH)/srcs/
 
 dev: fclean all norme 
