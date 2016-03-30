@@ -6,7 +6,7 @@
 /*   By: vklepper <vklepper@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/11 00:08:18 by vklepper          #+#    #+#             */
-/*   Updated: 2016/03/20 19:40:15 by vklepper         ###   ########.fr       */
+/*   Updated: 2016/03/30 21:05:59 by vklepper         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,9 @@ void	push_swap(char **argv)
 
 int		main(int argc, char **argv)
 {
-	if (argc < 2 || (ft_strcmp(argv[1], "-d") == 0 && argc < 3))
+	if (argc == 1 || (ft_strcmp(argv[1], "-v") == 0 && argc == 2))
+		return (0);
+	if (argc < 2 || (ft_strcmp(argv[1], "-v") == 0 && argc < 3))
 		ft_error(0);
 	else
 		push_swap(argv);
